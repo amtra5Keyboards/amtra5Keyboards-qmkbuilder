@@ -112,26 +112,7 @@ class Main extends React.Component {
 		const state = this.props.state;
 
 		return <div>
-			<h3>Upload QMK Firmware Builder configuration</h3>
-			<button
-				className='block'
-				onClick={ this.upload }>
-				Upload
-			</button>
-			<br/><br/>
-			<h3>Or import from keyboard-layout-editor.com</h3>
-			<textarea
-				className='kle'
-				placeholder='Paste layout here...'
-				value={ state.ui.get('kle', '') }
-				onChange={ state.ui.set('kle') }/>
-			<button
-				className='block'
-				onClick={ this.useKLE }>
-				Import
-			</button>
-			<br/><br/>
-			<h3>Or choose a preset layout</h3>
+			<h3>Choose a preset layout</h3>
 			{(() => {
 				const presets = [];
 				for (const preset in C.PRESETS) {

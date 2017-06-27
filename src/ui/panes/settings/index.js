@@ -77,59 +77,6 @@ class Settings extends React.Component {
 				Give your layout a name!
 			</Help>
 			<div style={{ height: '0.5rem' }}/>
-			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>Bootloader Size</h2>
-			<select
-				style={{ width: '8rem' }}
-				value={ keyboard.settings.bootloaderSize }
-				onChange={ e => keyboard.setSetting('bootloaderSize', parseInt(e.target.value)) }>
-				<option value={ C.BOOTLOADER_8192 }>8192 KB</option>
-				<option value={ C.BOOTLOADER_4096 }>4096 KB</option>
-				<option value={ C.BOOTLOADER_2048 }>2048 KB</option>
-				<option value={ C.BOOTLOADER_512 }>512 KB</option>
-			</select>
-			<Help>
-				<strong>Atmel DFU loader (ATmega32U4)</strong>: 4096
-				<br/>
-				<strong>Atmel DFU loader (AT90USB1286)</strong>: 8192
-				<br/>
-				<strong>LUFA bootloader (ATmega32U4)</strong>: 4096
-				<br/>
-				<strong>Arduino Caterina (ATmega32U4)</strong>: 4096
-				<br/>
-				<strong>USBaspLoader (ATmega***)</strong>: 2048
-				<br/>
-				<strong>Teensy halfKay (ATmega32U4)</strong>: 512
-				<br/>
-				<strong>Teensy++ halfKay (AT90USB1286)</strong>: 2048
-				<br/>
-				If in doubt, choose <strong>4096</strong>.
-			</Help>
-			<div style={{ height: '0.5rem' }}/>
-			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>WS2812 LEDs</h2>
-			<div style={{ width: '8rem', display: 'inline-block', textAlign: 'left' }}>
-				<NumberBox
-					style={{ width: '3.5rem' }}
-					min='0'
-					value={ keyboard.settings.rgbNum }
-					onChange={ v => keyboard.setSetting('rgbNum', v) }/>
-			</div>
-			<Help>
-				The number of WS2812 LEDs, if any.
-			</Help>
-			<div style={{ height: '0.5rem' }}/>
-			<h2 style={{ width: '8rem', marginRight: '0.8rem' }}>Backlight Levels</h2>
-			<div style={{ width: '8rem', display: 'inline-block', textAlign: 'left' }}>
-				<NumberBox
-					style={{ width: '3.5rem' }}
-					min='0'
-					max='15'
-					value={ keyboard.settings.backlightLevels }
-					onChange={ v => keyboard.setSetting('backlightLevels', v) }/>
-			</div>
-			<Help>
-				The number of backlight levels.
-			</Help>
-			<div style={{ height: '1.5rem' }}/>
 			Save your layout.
 			<div style={{ height: '0.5rem' }}/>
 			<button onClick={ this.save }>

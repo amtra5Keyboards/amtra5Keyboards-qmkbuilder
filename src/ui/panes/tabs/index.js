@@ -39,16 +39,6 @@ class Tabs extends React.Component {
 
 		return <div className='panes-tabs'>
 			<Tab
-				selected={ screen === C.SCREEN_WIRING }
-				onClick={ this.switchTab(C.SCREEN_WIRING) }>
-				Wiring
-			</Tab>
-			<Tab
-				selected={ screen === C.SCREEN_PINS }
-				onClick={ this.switchTab(C.SCREEN_PINS) }>
-				Pins
-			</Tab>
-			<Tab
 				selected={ screen === C.SCREEN_KEYMAP }
 				onClick={ this.switchTab(C.SCREEN_KEYMAP) }>
 				Keymap
