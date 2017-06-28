@@ -73,7 +73,7 @@ class Compile extends React.Component {
 		const files = Files.generate(keyboard);
 
 		// Get the firmware stencil.
-		JSZipUtils.getBinaryContent('/files/firmware.zip', (err, data) => {
+		JSZipUtils.getBinaryContent('files/firmware.zip', (err, data) => {
 			if (err) {
 				console.error(err);
 				state.error('Unable to retrieve files');
