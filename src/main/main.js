@@ -112,7 +112,14 @@ class Main extends React.Component {
 		const state = this.props.state;
 
 		return <div>
-			<h3>Choose a preset layout</h3>
+			<h3>Upload Keyboard Firmware Builder configuration</h3>
+			<button
+				className='block'
+				onClick={ this.upload }>
+				Upload
+			</button>
+			<br/><br/>
+			<h3>Or choose a preset layout</h3>
 			{(() => {
 				const presets = [];
 				for (const preset in C.PRESETS) {
