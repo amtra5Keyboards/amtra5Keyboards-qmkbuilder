@@ -38,7 +38,7 @@ class Main extends React.Component {
 
 				state.update({
 					keyboard: keyboard,
-					screen: C.SCREEN_WIRING // Switch to the wiring screen.
+					screen: C.SCREEN_KEYMAP // Switch to the keymap screen.
 				});
 			} catch (e) {
 				console.error(e);
