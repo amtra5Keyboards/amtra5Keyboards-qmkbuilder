@@ -38,31 +38,33 @@ class Tabs extends React.Component {
 		const screen = state.screen;
 
 		return <div className='panes-tabs'>
-			<Tab
-				selected={ screen === C.SCREEN_KEYMAP }
-				onClick={ this.switchTab(C.SCREEN_KEYMAP) }>
-				Keymap
-			</Tab>
-			<Tab
-				selected={ screen === C.SCREEN_MACROS }
-				onClick={ this.switchTab(C.SCREEN_MACROS) }>
-				Macros
-			</Tab>
-			<Tab
-				selected={ screen === C.SCREEN_QUANTUM }
-				onClick={ this.switchTab(C.SCREEN_QUANTUM) }>
-				Quantum
-			</Tab>
-			<Tab
-				selected={ screen === C.SCREEN_SETTINGS }
-				onClick={ this.switchTab(C.SCREEN_SETTINGS) }>
-				Settings
-			</Tab>
-			<Tab
-				selected={ screen === C.SCREEN_COMPILE }
-				onClick={ this.switchTab(C.SCREEN_COMPILE) }>
-				Compile
-			</Tab>
+			<div>
+				<Tab
+					selected={ screen === C.SCREEN_KEYMAP }
+					onClick={ this.switchTab(C.SCREEN_KEYMAP) }>
+					Keymap
+				</Tab>
+				<Tab
+					selected={ screen === C.SCREEN_MACROS }
+					onClick={ this.switchTab(C.SCREEN_MACROS) }>
+					Macros
+				</Tab>
+				<Tab
+					selected={ screen === C.SCREEN_QUANTUM }
+					onClick={ this.switchTab(C.SCREEN_QUANTUM) }>
+					Quantum
+				</Tab>
+				<Tab
+					selected={ screen === C.SCREEN_SETTINGS }
+					onClick={ this.switchTab(C.SCREEN_SETTINGS) }>
+					Settings
+				</Tab>
+				<Tab
+					selected={ screen === C.SCREEN_COMPILE }
+					onClick={ this.switchTab(C.SCREEN_COMPILE) }>
+					Compile
+				</Tab>
+			</div>
 		</div>;
 	}
 
